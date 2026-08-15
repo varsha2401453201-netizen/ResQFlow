@@ -15,10 +15,17 @@ app.get("/", (req, res) => {
 });
 
 app.get("/api/location", (req, res) => {
+  const { latitude, longitude } = req.query;
+
+  if (!latitude || !longitude) {
+    return res.status(400).json({
+      error: "Latitude and longitude are required"
+    });
+  }
+
   res.json({
-    latitude: 19.0760,
-    longitude: 72.8777,
-    city: "Mumbai"
+    latitude: Number(latitude),
+    longitude: Number(longitude)
   });
 });
 
