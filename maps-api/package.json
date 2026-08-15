@@ -1,0 +1,15 @@
+{
+  "name": "resqflow-maps-api",
+  "version": "1.0.0",
+  "description": "Maps and location services for ResQFlow",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "node server.js"
+  },
+  "dependencies": {
+    "express": "^5.1.0",
+    "cors": "^2.8.5",
+    "dotenv": "^17.2.1"
+  }
+}
